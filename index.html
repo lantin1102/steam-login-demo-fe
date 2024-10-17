@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Login Callback</title>
+</head>
+<body>
+    <h1>Steam Login Callback</h1>
+    <div id="message">Processing Steam login...</div>
+    <script>
+        // 获取URL中的查询参数
+        // const queryString = window.location.search;
+        // const urlParams = new URLSearchParams(queryString);
+
+        // 提取 Steam 返回的 OpenID 参数
+        // const claimedId = urlParams.get('openid.claimed_id');
+        // const identity = urlParams.get('openid.identity');
+        // const openidMode = urlParams.get('openid.mode');
+        // const openidSig = urlParams.get('openid.sig');
+
+        // 检查是否成功获取到用户身份
+        // if (openidMode === 'id_res' && claimedId) {
+        //     // 提取SteamID
+        //     const steamId = claimedId.split('/').pop();
+        //     document.getElementById('message').textContent = `Welcome! Your SteamID is: ${steamId}`;
+        // } else {
+        //     document.getElementById('message').textContent = 'Failed to authenticate with Steam. Please try again.';
+        // }
+
+        // 这里可以根据需要将数据发送到你的后端服务进行进一步处理
+        // fetch('https://your-backend-server.com/api/verifySteam', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({
+        //         claimedId,
+        //         openidSig,
+        //         otherParams: urlParams.toString()
+        //     })
+        // }).then(response => response.json())
+        //   .then(data => {
+        //       console.log('Verification result:', data);
+        //   })
+        //   .catch(error => console.error('Error verifying Steam user:', error));
+    </script>
+</body>
+</html>
