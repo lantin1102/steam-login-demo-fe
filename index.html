@@ -8,6 +8,25 @@
 <body>
     <h1>Steam Login Callback</h1>
     <div id="message">Processing Steam login...</div>
+
+        <button id="steam-login-button">Login via Steam</button>
+
+    <script>
+        document.getElementById('steam-login-button').addEventListener('click', function() {
+            // Construct the OpenID login URL
+            const openidUrl = 'https://steamcommunity.com/openid/login?' +
+                'openid.ns=http://specs.openid.net/auth/2.0' +
+                '&openid.mode=checkid_setup' +
+                '&openid.return_to=https://xxxx.ngrok.io/callback' +
+                '&openid.realm=https://xxxx.ngrok.io' +
+                '&openid.identity=http://specs.openid.net/auth/2.0/identifier_select' +
+                '&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select';
+            
+            // Redirect the user to Steam's OpenID login page
+            window.location.href = openidUrl;
+        });
+    </script>
+    
     <script>
         // 获取URL中的查询参数
         // const queryString = window.location.search;
